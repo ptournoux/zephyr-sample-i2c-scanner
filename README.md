@@ -1,27 +1,16 @@
-.. zephyr:code-sample:: lorawan-class-a
-   :name: LoRaWAN class A device
-   :relevant-api: lorawan_api
+# I2C Scanner
 
-   Join a LoRaWAN network and send a message periodically.
+Should work for all the boards with a arduino r3 pin layout.
 
-Overview
-********
+On ST nucleo 64 boards, the I2C port is accessible through I2C2. This code sample uses I2C2.
 
-A simple application to demonstrate the :ref:`LoRaWAN subsystem <lorawan_api>` of Zephyr.
+## How to use this sample
 
-Building and Running
-********************
+### Clone the repo to your workspace
 
-This sample can be found under
-:zephyr_file:`samples/subsys/lorawan/class_a` in the Zephyr tree.
+git clone https://github.com/ptournoux/zephyr-sample-i2c-scanner.git
 
-Before building the sample, make sure to select the correct region in the
-``prj.conf`` file.
+### Build
 
-The following commands build and flash the sample.
+west build --board=nucleo_wl55jc -p always zephyr-sample-i2c-scanner
 
-.. zephyr-app-commands::
-   :zephyr-app: samples/subsys/lorawan/class_a
-   :board: nucleo_wl55jc
-   :goals: build flash
-   :compact:
