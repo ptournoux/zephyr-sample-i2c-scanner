@@ -1,0 +1,11 @@
+common:
+  tags: i2c
+  depends_on: i2c
+  harness: console
+  harness_config:
+    type: one_line
+    regex:
+      - "<inf> TBD"
+sample:
+  description: List all the addresses of the I2C devices connected to an I2C port
+  name: I2C-Scanner
